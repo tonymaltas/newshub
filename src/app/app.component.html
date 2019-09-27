@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <!--  <span>HOME</span> -->
+       <span><a href="/"><img src="../assets/NewsHub.png"></a></span>
+       <span class="spacer"></span>
+       <a mat-button routerLink="/register">Register</a>
+       <a mat-button routerLink="/login">Login</a>
+       <div *ngIf="currentPage !== '/weather'">
+         <a mat-button routerLink="/weather">Weather</a>
+       </div>
+       <div *ngIf="currentPage !== '/news' && currentPage !== '/'">
+         <a mat-button routerLink="/news">News</a>
+       </div>
+    </mat-toolbar-row>
+ </mat-toolbar>
+ <router-outlet></router-outlet>
+ 
